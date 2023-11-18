@@ -1,1 +1,1 @@
-# Datapath-and-Assembler
+# 10 bit single-cycle CPU
