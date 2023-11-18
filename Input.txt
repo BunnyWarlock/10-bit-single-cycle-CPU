@@ -1,0 +1,29 @@
+Init 1
+LW $0, $t0
+Cpy $t1, $t0
+Init 2
+Cpy $s0, $t0
+Init 3
+Cpy $s1, $t0
+Init 5
+Cpy $s2, $t0
+LW $t1, $s0
+Cpy $t2, $t0
+Out $t2
+LW $t1, $s1
+Cpy $t3, $t0
+Out $t3
+Add $t2, $t3
+init 1
+Cpy $s1, $t0
+Init 0
+Cpy $s0, $0
+Cpy $t3, $t1
+Loop: Slt $t0, $t2
+Beqz Exit
+Add $s0, $t0
+Add $t0, $s1
+Out $s0
+J Loop
+Exit: Cpy $t0, $s0
+SW $t3, $s2
